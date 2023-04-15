@@ -1,30 +1,32 @@
- var readlineSync=require("readline-sync"); 
-// console.log("my name is Utkarsh gupta");
+var readlineSync=require("readline-sync");
 var score=0;
-var userAge=readlineSync.question('what is your age?\n');
-var userAdd=readlineSync.question('where do you live?\n');
-if(userAge>=25)
+var ques;
+var ans;
+function ask(ques,ans)
 {
-  if(userAdd=="bsr")
+  var userAsk=readlineSync.question(ques);
+  
+  if(userAsk==ans)
   {
-   score++;
+    score++;
   }
+  else
+  {
+    score--;
+  }
+  return score;
 }
-else
-{
-  score--;
-}
-console.log(score);
-
-//var userFriend=readlineSync.question('what is your friends name');
-// var details="hey"+userName;
-// console.log(details);
-// if(userName=="Utkarsh")
+console.log(ask("what is my current stipend\n",10000));
+// var score=0;
+// var num1;
+// var num2;
+// var num3;
+// function fun1(num1,num2)
 // {
-//   score++;
+//   num3=num1+num2;
+//   return num3;
 // }
-// else
-// {
-//   score--;
-// }
-// console.log(score);
+// console.log(fun1(1,3));
+// //or
+// var result=fun1(1,3);
+// console.log(result);
