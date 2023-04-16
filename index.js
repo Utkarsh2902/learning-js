@@ -1,11 +1,21 @@
 var readlineSync=require("readline-sync");
-var ques;
-function fun1(ans)
-{
-  var ques=readlineSync.question('what is my name\n');
-return ques
-}
-for(var i=0;i<5;i++)
+var N=readlineSync.question('Please enter the number')
+var string="";
+
+for(var i=N;i>0;i--)
   {
-    console.log(fun1("Utkarsh"));
+    for(var j=i;j>0;j--)
+      {
+        string+="*";
+      }
+    string+="\n"
   }
+// console.log(string);
+for(var i=0;i<=N;i++)
+  {
+    for(var j=0;j<i;j++)
+      {
+        string+="*";
+      }string+="\n"
+  }
+  console.log(string);
