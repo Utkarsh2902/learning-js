@@ -1,21 +1,33 @@
-var readlineSync=require("readline-sync");
-var N=readlineSync.question('Please enter the number')
-var string="";
 
-for(var i=N;i>0;i--)
+var readlineSync=require("readline-sync");
+// var N=readlineSync.question('Please enter the number')
+var user1=readlineSync.question('choose your hero\n')
+var superman={
+color: "red",
+  design: "funny",
+  strength: "50%"
+};
+  var batman={
+    color: "black",
+    design: "cool",
+    strength: "35%"
+  };
+// console.log(superman.strength);
+// console.log(batman.strength);
+// console.log(superman.strength>batman.strength?superman.color:batman.color);
+
+function myHero(user)
+{
+  if(user1==batman)
   {
-    for(var j=i;j>0;j--)
-      {
-        string+="*";
-      }
-    string+="\n"
+    console.log(batman.design)
   }
-// console.log(string);
-for(var i=0;i<=N;i++)
+  else
   {
-    for(var j=0;j<i;j++)
-      {
-        string+="*";
-      }string+="\n"
+    console.log(superman.design)
   }
-  console.log(string);
+}
+myHero(batman);
+
+
+
