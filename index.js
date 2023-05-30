@@ -54,7 +54,7 @@ function game(){
 }
 function showResults()
 {
-    console.log("---------------\n---------------\n");
+    console.log("Your finall score is\n"+score)
    console.log("Your finall score is\n"+score);
    console.log("You can also check the score list");
 }
